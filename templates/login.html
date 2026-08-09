@@ -8,7 +8,10 @@
     <input name="password" type="password" placeholder="password" required>
     <button type="submit">Login</button>
   </form>
-  <p class="msg">no account? <a href="{{ url_for('temp_add_user') }}">create test user</a> (testuser / testpassword)</p>
+  <p class="msg">no account? create a test one:
+    <a href="{{ url_for('temp_add_user') }}">cadet</a> or
+    <a href="{{ url_for('temp_add_user', role='command_officer') }}">command officer</a>
+    (testcadet / testofficer, password testpassword)</p>
 </section>
 
 {% endblock %}

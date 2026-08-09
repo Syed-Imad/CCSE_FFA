@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p><a href="{{ url_for('home') }}">&larr; back</a></p>
+
+<section>
+  <h2>Audit Log</h2>
+  <table>
+    <thead><tr><th>timestamp</th><th>user id</th><th>method</th><th>path</th><th>outcome</th></tr></thead>
+    <tbody>
+    {% for entry in entries %}
+      <tr>
+        <td>{{ entry.timestamp }}</td>
+        <td>{{ entry.user_id or "-" }}</td>
+        <td>{{ entry.method }}</td>
+        <td>{{ entry.path }}</td>
+        <td>{{ entry.outcome }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+{% endblock %}

@@ -9,15 +9,34 @@
 <section>
   <h2>Inventory</h2>
   <table>
-    <thead><tr><th>id</th><th>name</th><th>qty</th></tr></thead>
+    <thead><tr><th>id</th><th>name</th><th>qty</th>{% if role == "command_officer" %}<th>actions</th>{% endif %}</tr></thead>
     <tbody>
     {% for item in items %}
-      <tr><td>{{ item.id }}</td><td>{{ item.name }}</td><td>{{ item.quantity }}</td></tr>
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        {% if role == "command_officer" %}
+        <td>
+          <form class="inline" method="post" action="{{ url_for('inventory_item', item_id=item.id) }}">
+            <input name="name" value="{{ item.name }}" size="10">
+            <input name="quantity" type="number" value="{{ item.quantity }}" size="4">
+            <button type="submit">Save</button>
+          </form>
+          <form class="inline" method="post" action="{{ url_for('inventory_item', item_id=item.id) }}">
+            <input type="hidden" name="_action" value="delete">
+            <button type="submit">Remove</button>
+          </form>
+        </td>
+        {% endif %}
+      </tr>
     {% endfor %}
     </tbody>
   </table>
 </section>
 
+<!-- just UX, real check is role_required() in app.py -->
+{% if role == "command_officer" %}
 <section>
   <h2>Add Item</h2>
   <form method="post" action="{{ url_for('add_inventory_item') }}">
@@ -39,5 +58,8 @@
     <button type="submit">Add User</button>
   </form>
 </section>
+
+<p><a href="{{ url_for('audit_log') }}">view audit log</a></p>
+{% endif %}
 
 {% endblock %}
