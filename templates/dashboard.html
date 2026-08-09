@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<p>logged in as {{ username }} ({{ role }})</p>
+<form method="post" action="{{ url_for('logout') }}">
+  <button type="submit">Logout</button>
+</form>
+
+<section>
+  <h2>Inventory</h2>
+  <table>
+    <thead><tr><th>id</th><th>name</th><th>qty</th></tr></thead>
+    <tbody>
+    {% for item in items %}
+      <tr><td>{{ item.id }}</td><td>{{ item.name }}</td><td>{{ item.quantity }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Add Item</h2>
+  <form method="post" action="{{ url_for('add_inventory_item') }}">
+    <input name="name" placeholder="name" required>
+    <input name="quantity" type="number" value="0">
+    <button type="submit">Add Item</button>
+  </form>
+</section>
+
+<section>
+  <h2>Add User</h2>
+  <form method="post" action="{{ url_for('add_user') }}">
+    <input name="username" placeholder="username" required>
+    <input name="password" type="password" placeholder="password" required>
+    <select name="role">
+      <option value="cadet">cadet</option>
+      <option value="command_officer">command_officer</option>
+    </select>
+    <button type="submit">Add User</button>
+  </form>
+</section>
+
+{% endblock %}
