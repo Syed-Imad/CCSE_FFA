@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "d6deec5b36570208",
@@ -185,17 +186,27 @@
   },
   "active": "5b7cc76aff55f2a9",
   "lastOpenFiles": [
-    "report.md.tmp.357052.e4962a8d4a38",
-    "report.md.tmp.357052.f7fdd584c27f",
-    "report.md.tmp.357052.ac630e8a0c99",
-    "report.md.tmp.357052.5a375a9e0312",
-    "report.md.tmp.357052.8d179fada6bb",
-    "report.md.tmp.357052.26c2db3b743d",
-    "report.md.tmp.357052.1383d5c3e09e",
-    "report.md.tmp.357052.138db19293b2",
-    "report.md.tmp.357052.7f14019ac2cd",
-    "report.md.tmp.357052.fecec301c56d",
-    "report.md.tmp.357052.3602adcbee9e",
+    "report.md.tmp.477133.3c1efef711c0",
+    "StarfleetIMS_Report.tex.tmp.477133.cc70cdafc96e",
+    "report.md.tmp.477133.0be4f1b0fb7c",
+    "StarfleetIMS_Report.tex.tmp.477133.bde618b25d1b",
+    "report.md.tmp.477133.2d4bade7150d",
+    "StarfleetIMS_Report.tex.tmp.477133.265931bb0351",
+    "report.md.tmp.477133.27c09d935f9c",
+    "StarfleetIMS_Report.tex.tmp.477133.444664291f7f",
+    "StarfleetIMS_Report.tex.tmp.477133.f39b0e9dbd69",
+    "StarfleetIMS_Report.tex.tmp.477133.889eb39099ef",
+    "StarfleetIMS_Report.tex.tmp.477133.b7905cc9e646",
+    "images/inventory_item_route.png",
+    "images/log_request.png",
+    "images/reset_audit_outcome.png",
+    "images/record_history.png",
+    "images/role_required.png",
+    "images/login_required.png",
+    "images/Pasted image (20).png",
+    "images/Pasted image (19).png",
+    "images/Pasted image (18).png",
+    "images/Pasted image (17).png",
     "README.md",
     "report.md"
   ]

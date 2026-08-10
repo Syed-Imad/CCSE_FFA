@@ -11,4 +11,17 @@ venv/
 
 # Report drafts - not part of the code submission
 *.docx
+*.tex
+*.pdf
+*.jpg
+*.svg
 report.md
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
